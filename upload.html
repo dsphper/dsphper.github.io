@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./assets/css/demo.css">
+	<link href="./assets/css/prism.css" rel="stylesheet" />
+	<script src="./assets/js/prism.js"></script>
+
+</head>
+
+<body>
+<header>
+	<nav>
+	<div id="line">
+		<span id="title">
+			lUpload
+		</span>
+		<div id="right">
+			<span></span>
+		</div>
+	</div>
+
+	</nav>
+</header>
+<div id="blueBack">
+	<span>这是一款多功能的上传插件</span>
+</div>
+<div id="details">
+	<div id="center">
+		<div id="left">
+		</div>
+		<div id="right">
+			<div id="top">
+				<h4>功能简述</h4>
+				<ul id="ul">
+					<li>1.多文件上传</li>
+					<li>2.拖拽上传</li>
+					<li>3.粘贴上传</li>
+					<li>4.选择上传</li>
+					<li>5.队列上传</li>
+					<li>6.进度条</li>
+					<li>7.上传网速</li>
+					<li>8.多类型文件上传(可以针对不同类型设置缩略图)</li>
+					<li>9.增加多文件队列上传和同时上传的开关</li>
+				</ul>
+			</div>
+			<div id="bottom">
+				<h4>浏览器兼容性</h4>
+				<img src="./assets/image/jianrong.gif" alt="">
+			</div>
+		</div>	
+	</div>
+
+</div>
+<!-- <pre><code class="language-javascript">
+window.addEventListener('load', function() {
+	$('#select').selectFile({
+		url : '/lUpload/Demo/upload.php',
+		maxfiles: 111 , // 单次上传的数量
+		maxfilesize : 11,  // 单个文件允许的大小 (M)
+		tpl : function() { // 自定义模板
+			var tpl = '&#60;&#108;&#105;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#100;&#105;&#118;&#32;&#99;&#108;&#97;&#115;&#115;&#61;&#34;&#98;&#111;&#114;&#100;&#101;&#114;&#73;&#109;&#103;&#34;&#62;&#60;&#105;&#109;&#103;&#32;&#115;&#114;&#99;&#61;&#34;&#34;&#32;&#97;&#108;&#116;&#61;&#34;&#34;&#32;&#47;&#62;&#60;&#47;&#100;&#105;&#118;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#115;&#112;&#97;&#110;&#32;&#99;&#108;&#97;&#115;&#115;&#61;&#34;&#102;&#105;&#108;&#101;&#78;&#97;&#109;&#101;&#34;&#62;&#60;&#47;&#115;&#112;&#97;&#110;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#115;&#112;&#97;&#110;&#32;&#99;&#108;&#97;&#115;&#115;&#61;&#34;&#102;&#105;&#108;&#101;&#83;&#105;&#122;&#101;&#34;&#62;&#60;&#47;&#115;&#112;&#97;&#110;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#115;&#112;&#97;&#110;&#32;&#99;&#108;&#97;&#115;&#115;&#61;&#34;&#115;&#105;&#122;&#101;&#34;&#62;&#60;&#47;&#115;&#112;&#97;&#110;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#115;&#112;&#97;&#110;&#32;&#99;&#108;&#97;&#115;&#115;&#61;&#34;&#115;&#112;&#101;&#101;&#100;&#34;&#62;&#60;&#47;&#115;&#112;&#97;&#110;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#108;&#97;&#98;&#101;&#108;&#62;&#19978;&#20256;&#36827;&#24230;&#58;&#60;&#47;&#108;&#97;&#98;&#101;&#108;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#112;&#114;&#111;&#103;&#114;&#101;&#115;&#115;&#32;&#105;&#100;&#61;&#34;&#80;&#114;&#111;&#103;&#114;&#101;&#115;&#115;&#34;&#32;&#118;&#97;&#108;&#117;&#101;&#61;&#34;&#48;&#34;&#32;&#109;&#97;&#120;&#61;&#34;&#49;&#48;&#48;&#34;&#62;&#60;&#47;&#112;&#114;&#111;&#103;&#114;&#101;&#115;&#115;&#62;&#92;&#10;&#9;&#9;&#9;&#60;&#47;&#108;&#105;&#62;';
+			return tpl;
+		},
+		run : function(thisLi, c, s) { // 返回网速及上传百分比
+			console.log(c, s)
+			thisLi.find('#Progress')[0].value = c;
+			thisLi.find('.speed').text("网速：" + s + " K\/S")
+
+		},
+		complete : function(file) { // 上传完成后调用的
+			alert('第' + file.index + '文件上传完成!');
+			// $('uList li').eq(file.index).hide(); // 打开可以就可以控制上传完成的文件了.
+		}
+	});	
+}
+</code></pre>	 -->
+
+<!-- <div id="border">
+	<div id="drop"></div>
+	<ul id="uList">
+	</ul>
+</div> -->
+<!-- <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="./assets/js/lUpload.js"></script>
+<script>
+window.addEventListener('load', function() {
+	$('#select').selectFile({
+		url : '/lUpload/Demo/upload.php',
+		maxfiles: 111 , // 单次上传的数量
+		maxfilesize : 11,  // 单个文件允许的大小 (M)
+		tpl : function() { // 自定义模板
+			var tpl = '<li>\
+			<div class="borderImg"><img src="" alt="" /></div>\
+			<span class="fileName"></span>\
+			<span class="fileSize"></span>\
+			<span class="size"></span>\
+			<span class="speed"></span>\
+			<label>上传进度:</label>\
+			<progress id="Progress" value="0" max="100"></progress>\
+			</li>';
+			return tpl;
+		},
+		run : function(thisLi, c, s) { // 返回网速及上传百分比
+			console.log(c, s)
+			thisLi.find('#Progress')[0].value = c;
+			thisLi.find('.speed').text("网速：" + s + " K\/S")
+
+		},
+		complete : function(file) { // 上传完成后调用的
+			alert('第' + file.index + '文件上传完成!');
+			// $('uList li').eq(file.index).hide(); // 打开可以就可以控制上传完成的文件了.
+		}
+	});	
+	$('#drop').dropFile({
+		url : '/lUpload/Demo/upload.php',
+		maxfiles: 111 , // 单次上传的数量
+		maxfilesize : 11,  // 单个文件允许的大小 (M)
+		tpl : function() { // 自定义模板
+			var tpl = '<li>\
+			<div class="borderImg"><img src="" alt="" /></div>\
+			<span class="fileName"></span>\
+			<span class="fileSize"></span>\
+			<span class="size"></span>\
+			<span class="speed"></span>\
+			<label>上传进度:</label>\
+			<progress id="Progress" value="0" max="100"></progress>\
+			</li>';
+			return tpl;
+		},
+		run : function(thisLi, c, s) { // 返回网速及上传百分比
+			console.log(c, s)
+			thisLi.find('#Progress')[0].value = c;
+			thisLi.find('.speed').text("网速：" + s + " K\/S")
+
+		},
+		complete : function(file) { // 上传完成后调用的
+			alert('第' + file.index + '文件上传完成!');
+			// $('uList li').eq(file.index).hide(); // 打开可以就可以控制上传完成的文件了.
+		}
+	});	
+	$('#drop').pasteFile({
+		url : '/lUpload/Demo/upload.php',
+		maxfiles: 111 , // 单次上传的数量
+		maxfilesize : 11,  // 单个文件允许的大小 (M)
+		tpl : function() { // 自定义模板
+			var tpl = '<li>\
+			<div class="borderImg"><img src="" alt="" /></div>\
+			<span class="fileName"></span>\
+			<span class="fileSize"></span>\
+			<span class="size"></span>\
+			<span class="speed"></span>\
+			<label>上传进度:</label>\
+			<progress id="Progress" value="0" max="100"></progress>\
+			</li>';
+			return tpl;
+		},
+		run : function(thisLi, c, s) { // 返回网速及上传百分比
+			console.log(c, s)
+			thisLi.find('#Progress')[0].value = c;
+			thisLi.find('.speed').text("网速：" + s + " K\/S")
+
+		},
+		complete : function(file) { // 上传完成后调用的
+			alert('第' + file.index + '文件上传完成!');
+			// $('uList li').eq(file.index).hide(); // 打开可以就可以控制上传完成的文件了.
+		}
+	});	
+}, false);
+
+</script>
+<input type="file" id="select" > -->
+</body>
+</html>
